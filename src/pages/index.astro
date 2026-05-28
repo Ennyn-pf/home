@@ -115,7 +115,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <style>
   /* Sections after the dark hero — warm canvas */
   .home > main > section:not(.hero-dark) {
-    padding: 96px 0;
+    padding: 112px 0;
     border-bottom: 1px solid var(--line);
   }
   .home h2 { margin-bottom: 20px; }
@@ -159,10 +159,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     max-width: none;
   }
   .home .gap-mark {
-    font-size: 32px;
+    font-size: 44px;
     color: var(--rust);
     line-height: 1;
     text-align: center;
+    filter: drop-shadow(0 0 8px rgba(180, 71, 31, 0.25));
   }
   .home .gap-caption {
     text-align: center;
@@ -173,22 +174,34 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: var(--rust);
     font-weight: 600;
     max-width: none;
+    margin-top: 12px;
   }
 
-  /* Reveal section */
-  .home .reveal { text-align: center; }
+  /* Reveal section — the brand name moment. Hierarchy: NAME big, tagline supporting. */
+  .home .reveal {
+    text-align: center;
+    padding-top: 128px !important;
+    padding-bottom: 128px !important;
+  }
   .home .reveal .kicker {
     font-family: 'Fraunces', serif;
-    font-size: 22px;
+    font-size: clamp(56px, 7.5vw, 96px);
     font-weight: 900;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     text-transform: none;
-    color: var(--rust);
+    color: var(--ink);
+    line-height: 0.95;
     margin-bottom: 18px;
   }
   .home .reveal h2 {
-    font-size: clamp(32px, 4vw, 48px);
-    margin-bottom: 20px;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(20px, 2.4vw, 28px);
+    font-weight: 600;
+    font-style: italic;
+    color: var(--muted);
+    letter-spacing: -0.005em;
+    margin: 0 auto 32px;
+    max-width: 32ch;
   }
   .home .reveal .lede {
     margin: 0 auto;
