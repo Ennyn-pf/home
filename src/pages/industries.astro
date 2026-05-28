@@ -6,7 +6,9 @@ const verticals = [
   {
     slug: 'property-management',
     name: 'Property management',
-    tagline: 'AppFolio · Buildium · 50–500 doors. The lead case.',
+    scale: '50–500 doors · The lead case',
+    tools: 'AppFolio · Buildium · Propertyware · DocuSign · TransUnion',
+    pain: 'Vacancies bleed rent per day. Renewals get lost in the calendar. Maintenance bills get re-keyed into QuickBooks by hand. The system that pays your team and the system that runs your properties don\'t speak.',
     workflows: [
       'New leasing agent → fully provisioned',
       'Leasing performance → coaching nudges',
@@ -17,7 +19,9 @@ const verticals = [
   {
     slug: 'fitness',
     name: 'Fitness studios &amp; gyms',
-    tagline: 'Mindbody · Glofox · ClassPass. Class-based, social-brand-heavy.',
+    scale: '200–500 members · Class-based recurring',
+    tools: 'Mindbody · Glofox · ClassPass · Instagram',
+    pain: 'Instructors come and go fast. Trial members ghost in the first 48 hours. Classes fill or empty based on who\'s teaching — but nobody\'s coaching to that data.',
     workflows: [
       'New instructor → fully provisioned',
       'Class performance → instructor coaching',
@@ -28,7 +32,9 @@ const verticals = [
   {
     slug: 'trades',
     name: 'Home services &amp; trades',
-    tagline: 'ServiceTitan · Jobber · Housecall Pro. Field-heavy, licensing-bound.',
+    scale: '5–25 techs · Field-heavy',
+    tools: 'ServiceTitan · Jobber · Housecall Pro · Yelp · Angi',
+    pain: 'Leads die on hold. Techs burn admin hours between jobs. W2 and 1099 payroll reconciliation eats a weekend a month. Licenses and insurance expire silently.',
     workflows: [
       'New tech → license verified + provisioned',
       'Field-tech performance → coaching + routing',
@@ -39,7 +45,9 @@ const verticals = [
   {
     slug: 'medical',
     name: 'Dental &amp; small medical',
-    tagline: 'Dentrix · ZocDoc · 2–10 chair. HIPAA-bound, review-sensitive.',
+    scale: '2–10 chair · HIPAA-bound',
+    tools: 'Dentrix · Eaglesoft · ZocDoc · Healthgrades',
+    pain: 'No-shows hit revenue. Claims get rejected for cleanable reasons. Recall lapses quietly. New-hire HIPAA paperwork lives in a folder until it doesn\'t.',
     workflows: [
       'New hygienist → HIPAA cert + Dentrix provisioned',
       'Patient satisfaction → review flywheel',
@@ -50,7 +58,9 @@ const verticals = [
   {
     slug: 'restaurants',
     name: 'Restaurant &amp; café groups',
-    tagline: 'Toast · Square · 2–6 locations. High-turnover, social-heavy.',
+    scale: '2–6 locations · High-turnover',
+    tools: 'Toast · Square · Resy · OpenTable',
+    pain: 'Staff turn over weekly. Tip-pool reconciliation eats Sunday by hand. Multi-location reporting means three spreadsheets. Reviews compound — or punish — and nobody owns the response.',
     workflows: [
       'New server → Toast + food-safety cert',
       'Server performance → coaching &amp; staffing',
@@ -89,7 +99,9 @@ const verticals = [
             <a href={`${base}/${v.slug}`} class={`card accent-${v.accent}`}>
               <p class="card-tag">For {v.name.replace('&amp;', '&').replace(/<[^>]*>/g, '').toLowerCase()}</p>
               <h3 set:html={v.name}></h3>
-              <p class="card-tagline">{v.tagline}</p>
+              <p class="card-scale">{v.scale}</p>
+              <p class="card-tools">{v.tools}</p>
+              <p class="card-pain" set:html={v.pain}></p>
               <div class="card-foot">
                 <span class="card-seam-label">Three workflows we'd start with</span>
                 <ol class="card-workflows">
@@ -197,13 +209,31 @@ const verticals = [
     margin-bottom: 8px;
     color: var(--ink);
   }
-  .industries .card-tagline {
+  .industries .card-scale {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--soft);
+    font-weight: 600;
+    margin-bottom: 12px;
+    max-width: none;
+  }
+  .industries .card-tools {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 14px;
+    line-height: 1.55;
+    max-width: none;
+  }
+  .industries .card-pain {
     font-family: 'EB Garamond', serif;
     font-style: italic;
-    font-size: 16px;
-    color: var(--muted);
+    font-size: 15.5px;
+    color: var(--ink);
+    line-height: 1.55;
     margin-bottom: 22px;
-    line-height: 1.5;
     max-width: none;
   }
   .industries .card-foot {

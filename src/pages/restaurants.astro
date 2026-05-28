@@ -142,14 +142,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               <p>Per-server: covers handled, avg ticket, tip %, void rate, customer feedback from Toast and POS → coaching nudges + shift-assignment optimization + GM digest. Bridges service-performance data to staffing decisions Gusto can't see. <b>The genuine whitespace.</b></p>
             </div>
           </li>
+          <li>
+            <span class="seam-num">S3</span>
+            <div>
+              <h4>Tip-pool reconciliation across shifts</h4>
+              <p>Pulled from Toast per shift → allocated by role and tip-share rules → reconciled against the pay period in Gusto → tip-credit calculations verified. Compliance-critical (wage and tip-credit exposure is unforgiving). Today the GM does it by hand on Sunday &mdash; and gets it wrong often enough to matter. <b>One of the gnarliest governance seams in SMB.</b></p>
+            </div>
+          </li>
         </ol>
 
         <p class="more-seams">
-          <span class="more-label">Then we extend.</span> Tip-pool reconciliation across
-          employees and shifts (S3 &mdash; labor-compliance heavy), daily sales &rarr;
-          next-day reorder and 86 list updates (S4), Instagram &rarr; reservation conversion
-          with per-location attribution (S5), new-location ramp-up checklist (S6), and review
-          monitoring across Yelp / Google / Resy with branded response drafting.
+          <span class="more-label">Then we extend.</span> Daily sales &rarr; next-day
+          reorder and 86 list updates, Instagram &rarr; reservation conversion with
+          per-location attribution, new-location ramp-up checklist, and review monitoring
+          across Yelp / Google / Resy with branded response drafting.
         </p>
 
         <div class="engagement">
