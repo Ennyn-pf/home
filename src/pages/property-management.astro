@@ -40,10 +40,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <div class="stack-block">
             <p class="stack-title">Property operations</p>
             <ul>
-              <li>AppFolio · Buildium · Propertyware</li>
-              <li>Resident portal, work orders, rent collection</li>
-              <li>Lease docs via DocuSign or native</li>
-              <li>TransUnion screening, owner reporting</li>
+              <li>AppFolio or Buildium for the system of record</li>
+              <li>Resident portal for rent and work orders</li>
+              <li>DocuSign for leases and renewals</li>
+              <li>TransUnion for applicant screening</li>
             </ul>
           </div>
           <div class="stack-block">
@@ -51,17 +51,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <ul>
               <li>Gusto for payroll, benefits, time-off</li>
               <li>QuickBooks for accounting</li>
+              <li>Zillow, Apartments.com, Google Ads, Instagram for the lead pipeline</li>
               <li>Workspace or Microsoft 365 for email</li>
-              <li>LinkedIn for hiring and B2B owner reach</li>
-              <li>Instagram for tenant brand and marketing</li>
-              <li>Zillow, Apartments.com, Google Ads for the lead pipeline</li>
-              <li>Mailchimp for owner-acquisition campaigns</li>
-              <li>Training and supervision &mdash; <em>mostly nothing</em></li>
             </ul>
           </div>
         </div>
         <p class="callout">
-          Ennyn doesn't replace any of this. We connect them.
+          Ennyn doesn't replace any of this. We close the seams between them.
         </p>
       </div>
     </section>
@@ -88,6 +84,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <div>
               <p>Lead lands → instant qualify → tour → application → screening → lease → deposit → move-in. The clock is lost rent per day.</p>
               <p class="metric">Metric: <b>speed-to-lease</b> · $ = days vacancy × daily rent</p>
+              <p class="example">For a 200-door firm at $1,800 average rent, cutting a week of vacancy across ~100 turnovers per year ≈ <b>$42K</b> recovered annually.</p>
             </div>
           </div>
           <div class="loop-row">
@@ -97,7 +94,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             </div>
             <div>
               <p>Detect 75&ndash;90 days before expiration → proactive outreach → renewal offer → negotiation → signed. Highest-ROI loop in the business.</p>
-              <p class="metric">Metric: <b>renewal rate</b> · $ = 1&ndash;2 months rent + make-ready saved</p>
+              <p class="metric">Metric: <b>renewal rate</b> · $ = 1&ndash;2 months rent + make-ready saved per retain</p>
+              <p class="example">Five percentage points of renewal-rate improvement at the same 200-door firm ≈ <b>$32K</b> per year &mdash; the cheapest win in the business.</p>
             </div>
           </div>
           <div class="loop-row">
@@ -108,22 +106,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <div>
               <p>Rent collection → maintenance triage → routine comms → renewal countdown. 10&ndash;11 months of high-volume, low-judgment work.</p>
               <p class="metric">Metric: <b>cost-to-serve</b> · $ = labor hours per door per month</p>
+              <p class="example">Cutting routine ops from 1.5 to 1 hour per door per month at 200 doors ≈ <b>1,200 hours/year</b> &mdash; close to a part-time ops role recovered.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="start">
       <div class="wrap-mid">
         <div class="sec-head">
           <span class="sec-num">03</span>
           <div>
-            <h2>The six seams. Where we work.</h2>
+            <h2>Where we'd start.</h2>
             <p class="lede">
-              These are the specific cross-stack handoffs that today get done by a human
-              copying data, remembering a step, or dropping it. Each is a target for an
-              agentic workflow.
+              Most engagements begin with one seam, one operator, one falsifiable workflow.
+              For PM firms, that's almost always one of these two.
             </p>
           </div>
         </div>
@@ -133,71 +131,32 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <span class="seam-num">S1</span>
             <div>
               <h4>New leasing agent → fully provisioned</h4>
-              <p>Hired in Gusto → AppFolio account, role, territory, lead-inbox access, equipment, I-9, first-week training plan. Today, days of lag and missed steps. Agent does the bridge; human approves the access grant.</p>
+              <p>Hired in Gusto → AppFolio account, role, territory, lead-inbox access, equipment, I-9, first-week training plan. Today, days of lag and missed steps. The agent does the bridge; the human approves the access grant. <b>Fastest clean win.</b></p>
             </div>
           </li>
           <li>
             <span class="seam-num">S2</span>
             <div>
               <h4>Leasing performance → coaching</h4>
-              <p>Per-rep speed-to-lease and tour-to-lease in AppFolio → coaching nudges to the rep + weekly digest to the owner. Bridges revenue data to the people side Gusto can't see.</p>
-            </div>
-          </li>
-          <li>
-            <span class="seam-num">S3</span>
-            <div>
-              <h4>Work order → vendor bill → books</h4>
-              <p>Work order completes in AppFolio → vendor bill drafted in QuickBooks, coded to property and owner → owner statement updated. Anything over threshold flagged for approval.</p>
-            </div>
-          </li>
-          <li>
-            <span class="seam-num">S4</span>
-            <div>
-              <h4>Field hours → payroll</h4>
-              <p>Hours logged against jobs in AppFolio → reconciled against the pay period in Gusto → payroll draft surfaces mismatches for approval.</p>
-            </div>
-          </li>
-          <li>
-            <span class="seam-num">S5</span>
-            <div>
-              <h4>Renewals &amp; lease docs → e-sign → record</h4>
-              <p>Renewal generated → DocuSign sent → unsigned parties chased on cadence → executed copy filed back → status flipped → next renewal countdown started.</p>
-            </div>
-          </li>
-          <li>
-            <span class="seam-num">S6</span>
-            <div>
-              <h4>New owner-client → onboarded</h4>
-              <p>Signed management agreement → owner record, properties, units, portal access, initial market analysis, kickoff sequence. Today the slowest part of growth.</p>
+              <p>Per-rep speed-to-lease and tour-to-lease pulled from AppFolio → coaching nudges to the rep + weekly digest to the owner. Bridges revenue data to the people side Gusto can't see. <b>The genuine whitespace.</b></p>
             </div>
           </li>
         </ol>
-      </div>
-    </section>
 
-    <section class="start">
-      <div class="wrap-narrow">
-        <div class="sec-head">
-          <span class="sec-num">04</span>
-          <div>
-            <h2>Where we'd start.</h2>
-          </div>
+        <p class="more-seams">
+          <span class="more-label">Then we extend.</span> Work-order → vendor bill → books (S3),
+          field hours → payroll (S4), renewals &amp; e-sign chain (S5), new-owner onboarding (S6),
+          and the marketing channels above. Same orchestration shape, different surfaces.
+        </p>
+
+        <div class="engagement">
+          <p>
+            We don't sell a platform. We deliver a working orchestration, scoped to your actual stack, in days.
+          </p>
+          <p>
+            <a href={`${base}/waitlist`} class="btn-link">If that sounds right, talk to us →</a>
+          </p>
         </div>
-        <p>
-          Most engagements begin with one seam, one operator, one falsifiable workflow.
-          For most PM firms, that's <b>S1</b> &mdash; the new-hire provisioning loop &mdash;
-          for fastest clean win, or <b>S2</b> &mdash; leasing performance to coaching &mdash;
-          for the genuine whitespace that ties the back office to revenue.
-        </p>
-        <p>
-          We don't sell a platform. We deliver a working orchestration, scoped to your
-          actual stack, in days. Then we extend &mdash; marketing channels, lead-gen
-          platforms, and brand-building (Instagram, LinkedIn, Zillow, Google Ads) are
-          usually the next layer once the people-stack ↔ ops-stack bridge is in place.
-        </p>
-        <p>
-          <a href={`${base}/waitlist`} class="btn-link">If that sounds right, talk to us →</a>
-        </p>
       </div>
     </section>
 
@@ -302,6 +261,47 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     margin-top: 8px;
   }
   .pm .metric b { color: var(--rust); }
+  .pm .example {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink);
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: rgba(79, 107, 58, 0.06);
+    border-left: 3px solid var(--moss);
+    line-height: 1.5;
+  }
+  .pm .example b {
+    font-style: normal;
+    color: var(--moss);
+    font-weight: 700;
+  }
+  .pm .more-seams {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.65;
+    max-width: none;
+  }
+  .pm .more-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    font-weight: 600;
+    margin-right: 8px;
+  }
+  .pm .engagement {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+  .pm .engagement p { margin-bottom: 18px; }
 
   /* Seams */
   .pm .seam-list { list-style: none; counter-reset: seam; }
