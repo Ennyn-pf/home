@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout
+  title="About — Ennyn"
+  description="Why Ennyn exists, why now, who we are."
+  register="a"
+  activeNav="about"
+>
+  <main class="about">
+
+    <section class="hero">
+      <div class="wrap-narrow">
+        <p class="kicker">About Ennyn</p>
+        <h1>Why now.</h1>
+      </div>
+    </section>
+
+    <section class="body">
+      <div class="wrap-narrow">
+        <p class="lede">
+          Until recently, getting an SMB onto modern back-office orchestration meant one
+          of two bad options: pay for enterprise software they don't have the volume to
+          justify, or hire an in-house ops team they can't afford. Most operators chose
+          neither, and ran on a chain of manual handoffs across four vendors.
+        </p>
+        <p class="lede">
+          Agentic AI platforms changed the economics. It's now viable to deliver
+          enterprise-grade back-office orchestration as a service &mdash; an AI workflow
+          team running an orchestration layer that bridges the systems an SMB already
+          pays for, stood up in days, not quarters.
+        </p>
+        <p class="lede">
+          That's the wedge. That's why Ennyn is possible now.
+        </p>
+      </div>
+    </section>
+
+    <section class="team">
+      <div class="wrap-narrow">
+        <h2>Who we are.</h2>
+        <p>
+          We're a small team building Ennyn from operators' offices &mdash; not a product
+          tour from the outside. More details when we're out of stealth.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap-narrow">
+        <h2>Talk to us.</h2>
+        <p>
+          We're picking a small group of design partners. If your back office is held
+          together by spreadsheets, post-its, and the memory of one operations manager,
+          we'd like to hear about it.
+        </p>
+        <p>
+          <a href={`${base}/waitlist`} class="btn">Join the waitlist</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>
+
+<style>
+  .about section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .about .hero {
+    padding: 120px 0 56px;
+  }
+  .about .kicker { margin-bottom: 18px; }
+  .about h1 { margin-bottom: 12px; }
+  .about h2 { margin-bottom: 20px; }
+  .about p.lede + p.lede { margin-top: 20px; }
+  .about p + p { margin-top: 16px; }
+  .about .cta .btn { margin-top: 16px; }
+
+  @media (max-width: 768px) {
+    .about section { padding: 56px 0; }
+    .about .hero { padding-top: 80px; }
+  }
+</style>

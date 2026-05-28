@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 130" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- Outer pointed arch -->
+  <path d="M 18 130 L 18 50 A 32 32 0 0 1 82 50 L 82 130" stroke-width="1.2"/>
+
+  <!-- Inner pointed arch (the door void) -->
+  <path d="M 28 130 L 28 56 A 22 22 0 0 1 72 56 L 72 130" stroke-width="0.6" opacity="0.45"/>
+
+  <!-- Apex ornament — a quiet Durin's-star nod -->
+  <circle cx="50" cy="36" r="5" stroke-width="0.7"/>
+  <circle cx="50" cy="36" r="1.4" fill="currentColor" stroke="none"/>
+  <line x1="50" y1="26" x2="50" y2="32" stroke-width="0.5" opacity="0.6"/>
+  <line x1="50" y1="40" x2="50" y2="46" stroke-width="0.5" opacity="0.6"/>
+  <line x1="40" y1="36" x2="46" y2="36" stroke-width="0.5" opacity="0.6"/>
+  <line x1="54" y1="36" x2="60" y2="36" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- Threshold -->
+  <line x1="10" y1="130" x2="90" y2="130" stroke-width="1.4"/>
+  <line x1="4" y1="133.5" x2="96" y2="133.5" stroke-width="0.5" opacity="0.4"/>
+</svg>

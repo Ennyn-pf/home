@@ -1,0 +1,360 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout
+  title="For property management — Ennyn"
+  description="What Ennyn looks like for a property-management firm. Concrete loops, concrete seams, where we'd start."
+  register="b"
+  activeNav="property-management"
+>
+  <main class="pm">
+
+    <header class="hero">
+      <div class="wrap-mid">
+        <p class="kicker">For property management</p>
+        <h1>What Ennyn looks like for a PM firm.</h1>
+        <p class="lede">
+          The seams thesis is universal across SMBs. We lead with property management
+          because the disconnection is cleanest there. Here's the concrete shape for
+          a small operator running 50&ndash;500 doors.
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap-mid">
+        <div class="sec-head">
+          <span class="sec-num">01</span>
+          <div>
+            <h2>The stack you already run on.</h2>
+            <p class="lede">
+              Nothing in here is news to you. The two stacks are exactly the tools your
+              firm pays for today.
+            </p>
+          </div>
+        </div>
+
+        <div class="stack-list">
+          <div class="stack-block">
+            <p class="stack-title">Property operations</p>
+            <ul>
+              <li>AppFolio · Buildium · Propertyware</li>
+              <li>Resident portal, work orders, rent collection</li>
+              <li>Lease docs via DocuSign or native</li>
+              <li>TransUnion screening, owner reporting</li>
+            </ul>
+          </div>
+          <div class="stack-block">
+            <p class="stack-title">People, business, brand &amp; pipeline</p>
+            <ul>
+              <li>Gusto for payroll, benefits, time-off</li>
+              <li>QuickBooks for accounting</li>
+              <li>Workspace or Microsoft 365 for email</li>
+              <li>LinkedIn for hiring and B2B owner reach</li>
+              <li>Instagram for tenant brand and marketing</li>
+              <li>Zillow, Apartments.com, Google Ads for the lead pipeline</li>
+              <li>Mailchimp for owner-acquisition campaigns</li>
+              <li>Training and supervision &mdash; <em>mostly nothing</em></li>
+            </ul>
+          </div>
+        </div>
+        <p class="callout">
+          Ennyn doesn't replace any of this. We connect them.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap-mid">
+        <div class="sec-head">
+          <span class="sec-num">02</span>
+          <div>
+            <h2>The three loops where the money lives.</h2>
+            <p class="lede">
+              The PM business resolves cleanly onto a Fill loop, a Renew loop, and a
+              Manage loop. Each has a hard dollar metric. Each has seams that Ennyn closes.
+            </p>
+          </div>
+        </div>
+
+        <div class="loop-rows">
+          <div class="loop-row">
+            <div class="loop-label">
+              <p class="loop-tag">Loop 01</p>
+              <h3>Fill the vacancy</h3>
+            </div>
+            <div>
+              <p>Lead lands → instant qualify → tour → application → screening → lease → deposit → move-in. The clock is lost rent per day.</p>
+              <p class="metric">Metric: <b>speed-to-lease</b> · $ = days vacancy × daily rent</p>
+            </div>
+          </div>
+          <div class="loop-row">
+            <div class="loop-label">
+              <p class="loop-tag">Loop 02</p>
+              <h3>Prevent the move</h3>
+            </div>
+            <div>
+              <p>Detect 75&ndash;90 days before expiration → proactive outreach → renewal offer → negotiation → signed. Highest-ROI loop in the business.</p>
+              <p class="metric">Metric: <b>renewal rate</b> · $ = 1&ndash;2 months rent + make-ready saved</p>
+            </div>
+          </div>
+          <div class="loop-row">
+            <div class="loop-label">
+              <p class="loop-tag">Loop 03</p>
+              <h3>Run the tenancy</h3>
+            </div>
+            <div>
+              <p>Rent collection → maintenance triage → routine comms → renewal countdown. 10&ndash;11 months of high-volume, low-judgment work.</p>
+              <p class="metric">Metric: <b>cost-to-serve</b> · $ = labor hours per door per month</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap-mid">
+        <div class="sec-head">
+          <span class="sec-num">03</span>
+          <div>
+            <h2>The six seams. Where we work.</h2>
+            <p class="lede">
+              These are the specific cross-stack handoffs that today get done by a human
+              copying data, remembering a step, or dropping it. Each is a target for an
+              agentic workflow.
+            </p>
+          </div>
+        </div>
+
+        <ol class="seam-list">
+          <li>
+            <span class="seam-num">S1</span>
+            <div>
+              <h4>New leasing agent → fully provisioned</h4>
+              <p>Hired in Gusto → AppFolio account, role, territory, lead-inbox access, equipment, I-9, first-week training plan. Today, days of lag and missed steps. Agent does the bridge; human approves the access grant.</p>
+            </div>
+          </li>
+          <li>
+            <span class="seam-num">S2</span>
+            <div>
+              <h4>Leasing performance → coaching</h4>
+              <p>Per-rep speed-to-lease and tour-to-lease in AppFolio → coaching nudges to the rep + weekly digest to the owner. Bridges revenue data to the people side Gusto can't see.</p>
+            </div>
+          </li>
+          <li>
+            <span class="seam-num">S3</span>
+            <div>
+              <h4>Work order → vendor bill → books</h4>
+              <p>Work order completes in AppFolio → vendor bill drafted in QuickBooks, coded to property and owner → owner statement updated. Anything over threshold flagged for approval.</p>
+            </div>
+          </li>
+          <li>
+            <span class="seam-num">S4</span>
+            <div>
+              <h4>Field hours → payroll</h4>
+              <p>Hours logged against jobs in AppFolio → reconciled against the pay period in Gusto → payroll draft surfaces mismatches for approval.</p>
+            </div>
+          </li>
+          <li>
+            <span class="seam-num">S5</span>
+            <div>
+              <h4>Renewals &amp; lease docs → e-sign → record</h4>
+              <p>Renewal generated → DocuSign sent → unsigned parties chased on cadence → executed copy filed back → status flipped → next renewal countdown started.</p>
+            </div>
+          </li>
+          <li>
+            <span class="seam-num">S6</span>
+            <div>
+              <h4>New owner-client → onboarded</h4>
+              <p>Signed management agreement → owner record, properties, units, portal access, initial market analysis, kickoff sequence. Today the slowest part of growth.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="start">
+      <div class="wrap-narrow">
+        <div class="sec-head">
+          <span class="sec-num">04</span>
+          <div>
+            <h2>Where we'd start.</h2>
+          </div>
+        </div>
+        <p>
+          Most engagements begin with one seam, one operator, one falsifiable workflow.
+          For most PM firms, that's <b>S1</b> &mdash; the new-hire provisioning loop &mdash;
+          for fastest clean win, or <b>S2</b> &mdash; leasing performance to coaching &mdash;
+          for the genuine whitespace that ties the back office to revenue.
+        </p>
+        <p>
+          We don't sell a platform. We deliver a working orchestration, scoped to your
+          actual stack, in days. Then we extend &mdash; marketing channels, lead-gen
+          platforms, and brand-building (Instagram, LinkedIn, Zillow, Google Ads) are
+          usually the next layer once the people-stack ↔ ops-stack bridge is in place.
+        </p>
+        <p>
+          <a href={`${base}/waitlist`} class="btn-link">If that sounds right, talk to us →</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>
+
+<style>
+  .pm section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .pm .hero {
+    padding: 120px 0 64px;
+    border-bottom: 3px solid var(--ink);
+  }
+  .pm .kicker { margin-bottom: 18px; }
+  .pm h1 { margin-bottom: 22px; max-width: 16ch; }
+  .pm .lede { font-family: 'Fraunces', serif; }
+
+  .pm .sec-head {
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+    margin-bottom: 32px;
+  }
+  .pm .sec-head > div { flex: 1; }
+  .pm .sec-head h2 { margin-bottom: 12px; }
+  .pm .sec-head .lede { font-size: 17px; max-width: 70ch; }
+
+  .pm .stack-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  .pm .stack-block {
+    border: 1px solid var(--line);
+    padding: 22px 26px;
+    background: rgba(255,255,255,0.4);
+  }
+  .pm .stack-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    font-weight: 600;
+    margin-bottom: 14px;
+    max-width: none;
+  }
+  .pm .stack-block ul { list-style: none; }
+  .pm .stack-block li {
+    padding: 6px 0;
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    color: var(--muted);
+    border-top: 1px dotted var(--line);
+  }
+  .pm .stack-block li:first-of-type { border-top: none; }
+  .pm .stack-block em { color: var(--rust); font-style: italic; }
+  .pm .callout {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--ink);
+    text-align: center;
+    margin: 24px auto 0;
+    padding: 14px 20px;
+    border-top: 2px solid var(--rust);
+    border-bottom: 2px solid var(--rust);
+    max-width: 540px;
+  }
+
+  /* Loops as rows */
+  .pm .loop-rows { display: grid; gap: 24px; }
+  .pm .loop-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 28px;
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+  }
+  .pm .loop-row:first-child { border-top: none; padding-top: 0; }
+  .pm .loop-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rust);
+    font-weight: 600;
+    margin-bottom: 6px;
+    max-width: none;
+  }
+  .pm .loop-label h3 {
+    font-size: 24px;
+    line-height: 1.05;
+  }
+  .pm .metric {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--slate);
+    margin-top: 8px;
+  }
+  .pm .metric b { color: var(--rust); }
+
+  /* Seams */
+  .pm .seam-list { list-style: none; counter-reset: seam; }
+  .pm .seam-list li {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 22px;
+    border-top: 1px solid var(--line);
+    padding: 22px 0;
+    align-items: start;
+  }
+  .pm .seam-list li:first-child { border-top: none; padding-top: 0; }
+  .pm .seam-num {
+    font-family: 'Fraunces', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--rust);
+    line-height: 1;
+  }
+  .pm .seam-list h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .pm .seam-list p {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .pm .start { background: var(--paper-2); }
+  .pm .start p { margin-bottom: 18px; }
+  .pm .start b { color: var(--ink); font-weight: 700; }
+  .pm .btn-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 22px;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+  }
+  .pm .btn-link:hover { opacity: 0.88; }
+
+  @media (max-width: 768px) {
+    .pm .stack-list { grid-template-columns: 1fr; }
+    .pm .loop-row { grid-template-columns: 1fr; gap: 12px; }
+    .pm .seam-list li { grid-template-columns: 1fr; gap: 8px; }
+    .pm .seam-num { font-size: 28px; }
+  }
+</style>
