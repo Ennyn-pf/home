@@ -7,35 +7,55 @@ const verticals = [
     slug: 'property-management',
     name: 'Property management',
     tagline: 'AppFolio · Buildium · 50–500 doors. The lead case.',
-    seam: 'New leasing agent → fully provisioned',
+    workflows: [
+      'New leasing agent → fully provisioned',
+      'Leasing performance → coaching nudges',
+      'Owner-acquisition → onboarded portfolio',
+    ],
     accent: 'rust',
   },
   {
     slug: 'fitness',
     name: 'Fitness studios &amp; gyms',
     tagline: 'Mindbody · Glofox · ClassPass. Class-based, social-brand-heavy.',
-    seam: 'New instructor → fully provisioned',
+    workflows: [
+      'New instructor → fully provisioned',
+      'Class performance → instructor coaching',
+      'Member churn signal → save outreach',
+    ],
     accent: 'slate',
   },
   {
     slug: 'trades',
     name: 'Home services &amp; trades',
     tagline: 'ServiceTitan · Jobber · Housecall Pro. Field-heavy, licensing-bound.',
-    seam: 'New tech → fully provisioned + license verified',
+    workflows: [
+      'New tech → license verified + provisioned',
+      'Field-tech performance → coaching + routing',
+      'Yelp / Angi lead → dispatch with attribution',
+    ],
     accent: 'moss',
   },
   {
     slug: 'medical',
     name: 'Dental &amp; small medical',
     tagline: 'Dentrix · ZocDoc · 2–10 chair. HIPAA-bound, review-sensitive.',
-    seam: 'New hygienist → HIPAA-cert + Dentrix provisioned',
+    workflows: [
+      'New hygienist → HIPAA cert + Dentrix provisioned',
+      'Patient satisfaction → review flywheel',
+      'Insurance claim → submission &amp; rejection handling',
+    ],
     accent: 'gold',
   },
   {
     slug: 'restaurants',
     name: 'Restaurant &amp; café groups',
     tagline: 'Toast · Square · 2–6 locations. High-turnover, social-heavy.',
-    seam: 'New server → Toast + food-safety cert',
+    workflows: [
+      'New server → Toast + food-safety cert',
+      'Server performance → coaching &amp; staffing',
+      'Tip-pool reconciliation across shifts',
+    ],
     accent: 'plum',
   },
 ];
@@ -71,10 +91,12 @@ const verticals = [
               <h3 set:html={v.name}></h3>
               <p class="card-tagline">{v.tagline}</p>
               <div class="card-foot">
-                <span class="card-seam-label">Where we'd start</span>
-                <span class="card-seam">{v.seam}</span>
+                <span class="card-seam-label">Three workflows we'd start with</span>
+                <ol class="card-workflows">
+                  {v.workflows.map(wf => <li set:html={wf}></li>)}
+                </ol>
               </div>
-              <span class="card-arrow">→</span>
+              <span class="card-arrow">Read the deep dive →</span>
             </a>
           ))}
         </div>
@@ -186,7 +208,8 @@ const verticals = [
   }
   .industries .card-foot {
     border-top: 1px solid var(--line);
-    padding-top: 14px;
+    padding-top: 16px;
+    margin-bottom: 16px;
   }
   .industries .card-seam-label {
     display: block;
@@ -196,23 +219,53 @@ const verticals = [
     text-transform: uppercase;
     color: var(--soft);
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
   }
-  .industries .card-seam {
+  .industries .card-workflows {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: workflow;
+  }
+  .industries .card-workflows li {
+    counter-increment: workflow;
     font-family: 'EB Garamond', serif;
     font-size: 15px;
     color: var(--ink);
+    padding: 5px 0 5px 26px;
+    position: relative;
+    line-height: 1.45;
   }
-  .industries .card-arrow {
+  .industries .card-workflows li::before {
+    content: counter(workflow, decimal-leading-zero);
     position: absolute;
-    bottom: 26px;
-    right: 26px;
-    font-family: 'Fraunces', serif;
-    font-size: 22px;
-    color: var(--rust);
+    left: 0;
+    top: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
     font-weight: 700;
-    transition: transform 0.15s ease;
+    letter-spacing: 0.06em;
+    color: var(--rust);
   }
+  .industries .card.accent-slate .card-workflows li::before { color: var(--slate); }
+  .industries .card.accent-moss .card-workflows li::before { color: var(--moss); }
+  .industries .card.accent-gold .card-workflows li::before { color: var(--gold); }
+  .industries .card.accent-plum .card-workflows li::before { color: var(--plum); }
+  .industries .card-arrow {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rust);
+    font-weight: 600;
+    transition: transform 0.15s ease, color 0.15s ease;
+  }
+  .industries .card.accent-slate .card-arrow { color: var(--slate); }
+  .industries .card.accent-moss .card-arrow { color: var(--moss); }
+  .industries .card.accent-gold .card-arrow { color: var(--gold); }
+  .industries .card.accent-plum .card-arrow { color: var(--plum); }
   .industries .card:hover .card-arrow { transform: translateX(4px); }
 
   .industries .closing { background: var(--paper-2); text-align: center; }
