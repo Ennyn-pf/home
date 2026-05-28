@@ -181,7 +181,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .home .reveal {
     text-align: center;
     padding-top: 128px !important;
-    padding-bottom: 128px !important;
+    padding-bottom: 160px !important;
   }
   .home .reveal .kicker {
     font-family: 'Fraunces', serif;
@@ -244,13 +244,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   /* CTA */
-  .home .cta { text-align: center; }
-  .home .cta h2 { margin-bottom: 16px; }
+  .home .cta {
+    text-align: center;
+    padding-top: 144px !important;
+    padding-bottom: 144px !important;
+  }
+  .home .cta h2 { margin-bottom: 20px; }
   .home .cta .lede { margin: 0 auto; }
   .home .waitlist-form {
     display: flex;
     gap: 12px;
-    margin: 28px auto 0;
+    margin: 36px auto 0;
     max-width: 480px;
   }
   .home .waitlist-input {
@@ -269,7 +273,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     background: #fff;
   }
   .home .cta-fine {
-    margin: 18px auto 0;
+    margin: 32px auto 0;
     font-size: 13px;
     color: var(--soft);
   }
