@@ -329,8 +329,8 @@ a:hover { opacity: 0.7; }
 }
 
 .hero-dark .archway {
-  width: 80px;
-  height: 104px;
+  width: 120px;
+  height: 156px;
   color: var(--glow-warm);
   filter:
     drop-shadow(0 0 14px rgba(232, 217, 168, 0.55))
@@ -472,5 +472,5 @@ a:hover { opacity: 0.7; }
 
 @media (max-width: 768px) {
   .hero-dark { min-height: 80vh; padding: 80px 20px 120px; }
-  .hero-dark .archway { width: 64px; height: 84px; }
+  .hero-dark .archway { width: 90px; height: 117px; }
 }
