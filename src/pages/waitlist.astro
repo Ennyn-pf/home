@@ -8,18 +8,36 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   description="Join the Ennyn waitlist."
   register="a"
   activeNav="waitlist"
+  darkHero={true}
 >
   <main class="waitlist">
 
-    <section class="hero">
-      <div class="wrap-narrow">
+    <!-- DARK CINEMATIC HERO -->
+    <section class="hero-dark">
+      <div class="hero-content">
+        <svg class="archway" viewBox="0 0 100 130" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M 18 130 L 18 50 A 32 32 0 0 1 82 50 L 82 130" stroke-width="1.2"/>
+          <path d="M 28 130 L 28 56 A 22 22 0 0 1 72 56 L 72 130" stroke-width="0.6" opacity="0.45"/>
+          <circle cx="50" cy="36" r="5" stroke-width="0.7"/>
+          <circle cx="50" cy="36" r="1.4" fill="currentColor" stroke="none"/>
+          <line x1="50" y1="26" x2="50" y2="32" stroke-width="0.5" opacity="0.6"/>
+          <line x1="50" y1="40" x2="50" y2="46" stroke-width="0.5" opacity="0.6"/>
+          <line x1="40" y1="36" x2="46" y2="36" stroke-width="0.5" opacity="0.6"/>
+          <line x1="54" y1="36" x2="60" y2="36" stroke-width="0.5" opacity="0.6"/>
+          <line x1="10" y1="130" x2="90" y2="130" stroke-width="1.4"/>
+          <line x1="4" y1="133.5" x2="96" y2="133.5" stroke-width="0.5" opacity="0.4"/>
+        </svg>
         <p class="kicker">Waitlist</p>
         <h1>You're on the list.</h1>
         <p class="lede">
-          Thanks for signing up. We're talking to a small group of design partners ahead
-          of opening more broadly. If your firm fits, we'll be in touch.
+          Thanks for joining. We're talking to a small group of design partners
+          ahead of opening more broadly.
+        </p>
+        <p class="lede">
+          If your firm fits, we'll be in touch.
         </p>
       </div>
+      <span class="scroll-cue">↓ What's next</span>
     </section>
 
     <section class="next">
@@ -62,14 +80,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 </BaseLayout>
 
 <style>
-  .waitlist section {
+  .waitlist > main > section:not(.hero-dark) {
     padding: 80px 0;
     border-bottom: 1px solid var(--line);
   }
-  .waitlist .hero {
-    padding: 120px 0 56px;
+  .waitlist .next {
+    background: var(--paper);
+    position: relative;
+    margin-top: -40px;
+    z-index: 2;
+    padding-top: 56px !important;
   }
-  .waitlist .kicker { margin-bottom: 18px; }
   .waitlist h1 { margin-bottom: 18px; }
   .waitlist h2 { margin-bottom: 22px; }
 
@@ -141,7 +162,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   @media (max-width: 768px) {
-    .waitlist section { padding: 56px 0; }
-    .waitlist .hero { padding-top: 80px; }
+    .waitlist > main > section:not(.hero-dark) { padding: 56px 0; }
+    .waitlist .next { margin-top: -20px; padding-top: 40px !important; }
   }
 </style>
