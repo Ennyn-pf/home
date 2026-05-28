@@ -474,3 +474,202 @@ a:hover { opacity: 0.7; }
   .hero-dark { min-height: 80vh; padding: 80px 20px 120px; }
   .hero-dark .archway { width: 90px; height: 117px; }
 }
+
+/* ============================================
+   VERTICAL PAGE LAYOUT — shared by /fitness, /trades, /medical,
+   /restaurants (and any future /for-{vertical}). Register B canvas.
+   ============================================ */
+
+.vertical-page section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line);
+}
+.vertical-page .hero {
+  padding: 120px 0 64px;
+  border-bottom: 3px solid var(--ink);
+}
+.vertical-page .kicker { margin-bottom: 18px; }
+.vertical-page h1 { margin-bottom: 22px; max-width: 16ch; }
+.vertical-page .lede { font-family: 'EB Garamond', serif; }
+
+.vertical-page .sec-head {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  margin-bottom: 32px;
+}
+.vertical-page .sec-head > div { flex: 1; }
+.vertical-page .sec-head h2 { margin-bottom: 12px; }
+.vertical-page .sec-head .lede { font-size: 17px; max-width: 70ch; }
+
+.vertical-page .stack-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.vertical-page .stack-block {
+  border: 1px solid var(--line);
+  padding: 22px 26px;
+  background: rgba(255,255,255,0.4);
+}
+.vertical-page .stack-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rust);
+  font-weight: 600;
+  margin-bottom: 14px;
+  max-width: none;
+}
+.vertical-page .stack-block ul { list-style: none; }
+.vertical-page .stack-block li {
+  padding: 6px 0;
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  color: var(--muted);
+  border-top: 1px dotted var(--line);
+}
+.vertical-page .stack-block li:first-of-type { border-top: none; }
+.vertical-page .stack-block em { color: var(--rust); font-style: italic; }
+.vertical-page .callout {
+  font-family: 'Fraunces', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: center;
+  margin: 24px auto 0;
+  padding: 14px 20px;
+  border-top: 2px solid var(--rust);
+  border-bottom: 2px solid var(--rust);
+  max-width: 540px;
+}
+
+.vertical-page .loop-rows { display: grid; gap: 24px; }
+.vertical-page .loop-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+}
+.vertical-page .loop-row:first-child { border-top: none; padding-top: 0; }
+.vertical-page .loop-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rust);
+  font-weight: 600;
+  margin-bottom: 6px;
+  max-width: none;
+}
+.vertical-page .loop-label h3 {
+  font-size: 24px;
+  line-height: 1.05;
+}
+.vertical-page .metric {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--slate);
+  margin-top: 8px;
+}
+.vertical-page .metric b { color: var(--rust); }
+.vertical-page .example {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink);
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: rgba(79, 107, 58, 0.06);
+  border-left: 3px solid var(--moss);
+  line-height: 1.5;
+}
+.vertical-page .example b {
+  font-style: normal;
+  color: var(--moss);
+  font-weight: 700;
+}
+
+.vertical-page .seam-list { list-style: none; }
+.vertical-page .seam-list li {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 22px;
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+  align-items: start;
+}
+.vertical-page .seam-list li:first-child { border-top: none; padding-top: 0; }
+.vertical-page .seam-num {
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--rust);
+  line-height: 1;
+}
+.vertical-page .seam-list h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.vertical-page .seam-list p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.vertical-page .seam-list b { color: var(--ink); font-weight: 700; }
+
+.vertical-page .more-seams {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: none;
+}
+.vertical-page .more-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rust);
+  font-weight: 600;
+  margin-right: 8px;
+}
+.vertical-page .engagement {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.vertical-page .engagement p { margin-bottom: 18px; }
+
+.vertical-page .start { background: var(--paper-2); }
+.vertical-page .start p { margin-bottom: 18px; }
+.vertical-page .start b { color: var(--ink); font-weight: 700; }
+.vertical-page .btn-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 22px;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.vertical-page .btn-link:hover { opacity: 0.88; }
+
+@media (max-width: 768px) {
+  .vertical-page .stack-list { grid-template-columns: 1fr; }
+  .vertical-page .loop-row { grid-template-columns: 1fr; gap: 12px; }
+  .vertical-page .seam-list li { grid-template-columns: 1fr; gap: 8px; }
+  .vertical-page .seam-num { font-size: 28px; }
+}

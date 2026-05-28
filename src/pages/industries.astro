@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const verticals = [
+  {
+    slug: 'property-management',
+    name: 'Property management',
+    tagline: 'AppFolio · Buildium · 50–500 doors. The lead case.',
+    seam: 'New leasing agent → fully provisioned',
+    accent: 'rust',
+  },
+  {
+    slug: 'fitness',
+    name: 'Fitness studios &amp; gyms',
+    tagline: 'Mindbody · Glofox · ClassPass. Class-based, social-brand-heavy.',
+    seam: 'New instructor → fully provisioned',
+    accent: 'slate',
+  },
+  {
+    slug: 'trades',
+    name: 'Home services &amp; trades',
+    tagline: 'ServiceTitan · Jobber · Housecall Pro. Field-heavy, licensing-bound.',
+    seam: 'New tech → fully provisioned + license verified',
+    accent: 'moss',
+  },
+  {
+    slug: 'medical',
+    name: 'Dental &amp; small medical',
+    tagline: 'Dentrix · ZocDoc · 2–10 chair. HIPAA-bound, review-sensitive.',
+    seam: 'New hygienist → HIPAA-cert + Dentrix provisioned',
+    accent: 'gold',
+  },
+  {
+    slug: 'restaurants',
+    name: 'Restaurant &amp; café groups',
+    tagline: 'Toast · Square · 2–6 locations. High-turnover, social-heavy.',
+    seam: 'New server → Toast + food-safety cert',
+    accent: 'plum',
+  },
+];
+---
+
+<BaseLayout
+  title="Industries — Ennyn"
+  description="Five SMB verticals. One seams thesis. Pick the industry that matches your firm to see the concrete shape Ennyn takes."
+  register="b"
+  activeNav="industries"
+>
+  <main class="industries">
+
+    <header class="hero">
+      <div class="wrap-mid">
+        <p class="kicker">Industries</p>
+        <h1>Five verticals. One seams thesis.</h1>
+        <p class="lede">
+          The orchestration thesis applies cleanly across SMB verticals &mdash;
+          same two stacks, same loops, same seams. The tools change and the
+          language changes; the shape doesn't. Pick the industry that matches
+          your firm to see the concrete proof case.
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap-mid">
+        <div class="cards">
+          {verticals.map(v => (
+            <a href={`${base}/${v.slug}`} class={`card accent-${v.accent}`}>
+              <p class="card-tag">For {v.name.replace('&amp;', '&').replace(/<[^>]*>/g, '').toLowerCase()}</p>
+              <h3 set:html={v.name}></h3>
+              <p class="card-tagline">{v.tagline}</p>
+              <div class="card-foot">
+                <span class="card-seam-label">Where we'd start</span>
+                <span class="card-seam">{v.seam}</span>
+              </div>
+              <span class="card-arrow">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap-narrow">
+        <h2>Don't see your industry?</h2>
+        <p>
+          The shape is the same. The seams are the same. Only the vendor names
+          and the dollar values change. If your back office and your operations
+          run on software that doesn't talk &mdash; whether you're a clinic, a
+          studio, a logistics SMB, or something else &mdash; we'd like to hear
+          about it.
+        </p>
+        <p>
+          <a href={`${base}/waitlist`} class="btn-link">Tell us about your stack →</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>
+
+<style>
+  .industries section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .industries .hero {
+    padding: 120px 0 64px;
+    border-bottom: 3px solid var(--ink);
+  }
+  .industries .kicker { margin-bottom: 18px; }
+  .industries h1 { margin-bottom: 22px; max-width: 18ch; }
+  .industries .lede { font-family: 'EB Garamond', serif; max-width: 62ch; }
+
+  .industries .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .industries .card {
+    display: block;
+    position: relative;
+    padding: 32px 32px 28px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    overflow: hidden;
+  }
+  .industries .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+  }
+  .industries .card.accent-rust::before { background: var(--rust); }
+  .industries .card.accent-slate::before { background: var(--slate); }
+  .industries .card.accent-moss::before { background: var(--moss); }
+  .industries .card.accent-gold::before { background: var(--gold); }
+  .industries .card.accent-plum::before { background: var(--plum); }
+  .industries .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px var(--shadow);
+    background: rgba(255, 255, 255, 0.75);
+  }
+
+  .industries .card-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--rust);
+    margin-bottom: 10px;
+    max-width: none;
+  }
+  .industries .card.accent-rust .card-tag { color: var(--rust); }
+  .industries .card.accent-slate .card-tag { color: var(--slate); }
+  .industries .card.accent-moss .card-tag { color: var(--moss); }
+  .industries .card.accent-gold .card-tag { color: var(--gold); }
+  .industries .card.accent-plum .card-tag { color: var(--plum); }
+
+  .industries .card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .industries .card-tagline {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 22px;
+    line-height: 1.5;
+    max-width: none;
+  }
+  .industries .card-foot {
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+  }
+  .industries .card-seam-label {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--soft);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .industries .card-seam {
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .industries .card-arrow {
+    position: absolute;
+    bottom: 26px;
+    right: 26px;
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    color: var(--rust);
+    font-weight: 700;
+    transition: transform 0.15s ease;
+  }
+  .industries .card:hover .card-arrow { transform: translateX(4px); }
+
+  .industries .closing { background: var(--paper-2); text-align: center; }
+  .industries .closing h2 { margin-bottom: 18px; }
+  .industries .closing p { margin: 0 auto 18px; max-width: 60ch; }
+  .industries .btn-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 22px;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+  }
+  .industries .btn-link:hover { opacity: 0.88; }
+
+  @media (max-width: 768px) {
+    .industries .cards { grid-template-columns: 1fr; }
+  }
+</style>

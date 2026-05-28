@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout
+  title="For home services & trades — Ennyn"
+  description="What Ennyn looks like for a trades business. Field-heavy, contractor mix, licensing-bound."
+  register="b"
+  activeNav="industries"
+>
+  <main class="vertical-page">
+
+    <header class="hero">
+      <div class="wrap-mid">
+        <p class="kicker">For home services &amp; trades</p>
+        <h1>What Ennyn looks like for a trades business.</h1>
+        <p class="lede">
+          HVAC, plumbing, electrical, landscaping. Field operations, contractor
+          mix, licensing-bound. Here's the concrete shape for a 5&ndash;25 tech
+          shop.
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap-mid">
+        <div class="sec-head">
+          <span class="sec-num">01</span>
+          <div>
+            <h2>The stack you already run on.</h2>
+            <p class="lede">
+              Nothing in here is news to you. These are the tools your shop
+              pays for today.
+            </p>
+          </div>
+        </div>
+
+        <div class="stack-list">
+          <div class="stack-block">
+            <p class="stack-title">Field operations</p>
+            <ul>
+              <li>ServiceTitan, Jobber, or Housecall Pro for the system of record</li>
+              <li>Estimate → dispatch → completion → invoice flow</li>
+              <li>Customer portal and payment</li>
+              <li>Parts ordering and inventory</li>
+            </ul>
+          </div>
+          <div class="stack-block">
+            <p class="stack-title">People, business, brand &amp; pipeline</p>
+            <ul>
+              <li>Gusto for payroll (heavy W2 + 1099 mix)</li>
+              <li>QuickBooks for accounting</li>
+              <li>Yelp, Angi, Google Local Ads, Facebook for lead generation</li>
+              <li>LinkedIn for B2B commercial customers</li>
+              <li>Workspace or Microsoft 365 for email</li>
+            </ul>
+          </div>
+        </div>
+        <p class="callout">
+          Ennyn doesn't replace any of this. We close the seams between them.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap-mid">
+        <div class="sec-head">
+          <span class="sec-num">02</span>
+          <div>
+            <h2>The three loops where the money lives.</h2>
+            <p class="lede">
+              The trades business resolves cleanly onto a Book loop, an Earn-the-next-call
+              loop, and a Dispatch loop. Each has a hard dollar metric. Each has seams
+              Ennyn closes.
+            </p>
+          </div>
+        </div>
+
+        <div class="loop-rows">
+          <div class="loop-row">
+            <div class="loop-label">
+              <p class="loop-tag">Loop 01 · Acquisition</p>
+              <h3>Book the job</h3>
+            </div>
+            <div>
+              <p>Lead from Yelp / Angi / Google Local / phone call → instant qualify → estimate sent → scheduled. The clock is opportunity lost per hour.</p>
+              <p class="metric">Metric: <b>lead-to-booked-job conversion</b> · $ = (conversion lift) × (avg ticket)</p>
+              <p class="example">A 15-tech HVAC shop with 200 leads/month. A 5pt conversion improvement ≈ 10 more booked jobs/month × $800 avg ticket ≈ <b>$96K/year</b>.</p>
+            </div>
+          </div>
+          <div class="loop-row">
+            <div class="loop-label">
+              <p class="loop-tag">Loop 02 · Satisfaction</p>
+              <h3>Earn the next call</h3>
+            </div>
+            <div>
+              <p>Post-service follow-up → 5-star review request → repeat-customer cadence → membership / service-agreement renewal.</p>
+              <p class="metric">Metric: <b>5-star review rate · repeat-customer %</b> · $ = (rate lift) × (repeat ticket value)</p>
+              <p class="example">5% repeat-rate improvement ≈ 50 more recurring customer-jobs/year × $800 ≈ <b>$40K/year</b>, plus reputation flywheel effects.</p>
+            </div>
+          </div>
+          <div class="loop-row">
+            <div class="loop-label">
+              <p class="loop-tag">Loop 03 · Steady state</p>
+              <h3>Dispatch the field</h3>
+            </div>
+            <div>
+              <p>Daily routing → parts coordination → completion → invoice → next-day prep. High volume; every hour of admin per tech is revenue forgone.</p>
+              <p class="metric">Metric: <b>billable hours / total hours · gross margin per job</b></p>
+              <p class="example">15 techs × 1 hour/day of admin saved × 240 working days × $25/hr loaded cost ≈ <b>$90K/year</b> recovered &mdash; or that many billable hours added.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="start">
+      <div class="wrap-mid">
+        <div class="sec-head">
+          <span class="sec-num">03</span>
+          <div>
+            <h2>Where we'd start.</h2>
+            <p class="lede">
+              Most engagements begin with one seam, one operator, one falsifiable workflow.
+              For trades shops, the compliance angle makes one of these two the first stop.
+            </p>
+          </div>
+        </div>
+
+        <ol class="seam-list">
+          <li>
+            <span class="seam-num">S1</span>
+            <div>
+              <h4>New tech → fully provisioned + verified</h4>
+              <p>Hired in Gusto → ServiceTitan account, role, territory, vehicle assignment, license &amp; insurance verified and filed, certifications logged, first-week dispatch plan and ride-along schedule. Today: 3&ndash;5 day lag, with paperwork drifting on I-9, certifications, or vehicle assignment. The agent does the bridge; the human approves the access grant. <b>Fastest clean win for compliance-heavy trades.</b></p>
+            </div>
+          </li>
+          <li>
+            <span class="seam-num">S2</span>
+            <div>
+              <h4>Field-tech performance → coaching &amp; route optimization</h4>
+              <p>Per-tech billable hours, first-call resolution rate, customer rating, average ticket from ServiceTitan → coaching nudges to the tech + dispatch-route adjustments + weekly owner digest. Bridges field-performance data to actual scheduling decisions Gusto can't see. <b>The genuine whitespace.</b></p>
+            </div>
+          </li>
+        </ol>
+
+        <p class="more-seams">
+          <span class="more-label">Then we extend.</span> Work-order → vendor bill → books (S3),
+          field hours → payroll with W2/1099 reconciliation (S4), license &amp; insurance
+          expiration tracking (S5), warranty and service-agreement renewals (S6), and
+          Yelp / Angi / Google Local lead routing with attribution.
+        </p>
+
+        <div class="engagement">
+          <p>
+            We don't sell a platform. We deliver a working orchestration, scoped to your actual stack, in days.
+          </p>
+          <p>
+            <a href={`${base}/waitlist`} class="btn-link">If that sounds right, talk to us →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>

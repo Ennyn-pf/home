@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout
+  title="For fitness studios — Ennyn"
+  description="What Ennyn looks like for a fitness studio or gym. Class-based, social-brand-heavy, recurring revenue."
+  register="b"
+  activeNav="industries"
+>
+  <main class="vertical-page">
+
+    <header class="hero">
+      <div class="wrap-mid">
+        <p class="kicker">For fitness studios &amp; gyms</p>
+        <h1>What Ennyn looks like for a fitness studio.</h1>
+        <p class="lede">
+          Yoga, pilates, CrossFit, boutique gym &mdash; the same orchestration
+          thesis applies. Here's the concrete shape for an SMB studio running
+          200&ndash;500 members.
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap-mid">
+        <div class="sec-head">
+          <span class="sec-num">01</span>
+          <div>
+            <h2>The stack you already run on.</h2>
+            <p class="lede">
+              Nothing in here is news to you. These are the tools your studio
+              pays for today.
+            </p>
+          </div>
+        </div>
+
+        <div class="stack-list">
+          <div class="stack-block">
+            <p class="stack-title">Studio operations</p>
+            <ul>
+              <li>Mindbody, Glofox, or ClassPass for the system of record</li>
+              <li>Member portal, class schedule, check-ins</li>
+              <li>Recurring billing and membership tiers</li>
+              <li>Class booking, waitlists, no-show handling</li>
+            </ul>
+          </div>
+          <div class="stack-block">
+            <p class="stack-title">People, business, brand &amp; pipeline</p>
+            <ul>
+              <li>Gusto for payroll (instructors often 1099)</li>
+              <li>QuickBooks for accounting</li>
+              <li>Instagram and TikTok for class promo and brand</li>
+              <li>Google Reviews and Yelp for local discovery</li>
+              <li>Workspace or Microsoft 365 for email</li>
+            </ul>
+          </div>
+        </div>
+        <p class="callout">
+          Ennyn doesn't replace any of this. We close the seams between them.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap-mid">
+        <div class="sec-head">
+          <span class="sec-num">02</span>
+          <div>
+            <h2>The three loops where the money lives.</h2>
+            <p class="lede">
+              The studio business resolves cleanly onto an Acquire loop, a
+              Keep loop, and a Run loop. Each has a hard dollar metric. Each
+              has seams Ennyn closes.
+            </p>
+          </div>
+        </div>
+
+        <div class="loop-rows">
+          <div class="loop-row">
+            <div class="loop-label">
+              <p class="loop-tag">Loop 01 · Acquisition</p>
+              <h3>Fill the class</h3>
+            </div>
+            <div>
+              <p>Free-trial signup → first-class booking → conversion to membership. Speed and personalization matter; the prospect's first 48 hours are decisive.</p>
+              <p class="metric">Metric: <b>trial-to-member conversion</b> · $ = (conversion lift) × (avg LTV)</p>
+              <p class="example">A 300-member studio at $150/mo. 200 trials per year. Lifting trial-to-member from 30% to 35% ≈ <b>$18K</b> additional first-year revenue, more compounding in retention.</p>
+            </div>
+          </div>
+          <div class="loop-row">
+            <div class="loop-label">
+              <p class="loop-tag">Loop 02 · Satisfaction</p>
+              <h3>Keep the member</h3>
+            </div>
+            <div>
+              <p>Detect churn signals (skipped classes, frozen membership, low engagement) → proactive outreach → save the relationship. Highest-ROI loop in the business.</p>
+              <p class="metric">Metric: <b>monthly churn rate</b> · $ = saves × avg remaining lifetime</p>
+              <p class="example">Cutting monthly churn from 4% to 3% at 300 members ≈ <b>$32K/year</b> retained &mdash; the cheapest win in any studio.</p>
+            </div>
+          </div>
+          <div class="loop-row">
+            <div class="loop-label">
+              <p class="loop-tag">Loop 03 · Steady state</p>
+              <h3>Run the schedule</h3>
+            </div>
+            <div>
+              <p>Daily class operations &mdash; instructor scheduling, sub-finding, no-show handling, recurring billing follow-up, member service. High-volume, low judgment per event.</p>
+              <p class="metric">Metric: <b>cost-to-serve</b> · $ = admin hours per 100 members per month</p>
+              <p class="example">Cutting 30 minutes/day of front-desk admin ≈ <b>180 hours/year</b> recovered &mdash; roughly $4,500 at $25/hr, plus the cost of mistakes avoided.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="start">
+      <div class="wrap-mid">
+        <div class="sec-head">
+          <span class="sec-num">03</span>
+          <div>
+            <h2>Where we'd start.</h2>
+            <p class="lede">
+              Most engagements begin with one seam, one operator, one falsifiable
+              workflow. For fitness studios, that's almost always one of these two.
+            </p>
+          </div>
+        </div>
+
+        <ol class="seam-list">
+          <li>
+            <span class="seam-num">S1</span>
+            <div>
+              <h4>New instructor → fully provisioned</h4>
+              <p>Hired in Gusto → Mindbody instructor profile, class assignments, payroll setup, liability waiver signed and filed, intro to studio managers, first-class briefing. Today: days of delay, first class taught with half the access still pending. The agent does the bridge; the human approves the class assignments. <b>Fastest clean win.</b></p>
+            </div>
+          </li>
+          <li>
+            <span class="seam-num">S2</span>
+            <div>
+              <h4>Class performance → instructor coaching</h4>
+              <p>Per-instructor class fill rate, member feedback, attendance trends pulled from Mindbody → coaching nudges to the instructor + weekly digest to the owner. Bridges class-performance data to pay and scheduling decisions Gusto can't see. <b>The genuine whitespace.</b></p>
+            </div>
+          </li>
+        </ol>
+
+        <p class="more-seams">
+          <span class="more-label">Then we extend.</span> Failed-card recovery flows (S3),
+          tip/commission reconciliation (S4), Instagram engagement → free-trial signup (S5),
+          seasonal class-promo campaigns and corporate-wellness onboarding (S6), and Google
+          Reviews monitoring across locations.
+        </p>
+
+        <div class="engagement">
+          <p>
+            We don't sell a platform. We deliver a working orchestration, scoped to your actual stack, in days.
+          </p>
+          <p>
+            <a href={`${base}/waitlist`} class="btn-link">If that sounds right, talk to us →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>

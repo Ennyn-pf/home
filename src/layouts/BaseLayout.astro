@@ -5,7 +5,7 @@ interface Props {
   title?: string;
   description?: string;
   register?: 'a' | 'b';
-  activeNav?: 'home' | 'thesis' | 'property-management' | 'about' | 'waitlist' | null;
+  activeNav?: 'home' | 'thesis' | 'industries' | 'about' | 'waitlist' | null;
   darkHero?: boolean;
 }
 
@@ -21,7 +21,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const links = [
   { href: `${base}/thesis`, label: 'Thesis', key: 'thesis' },
-  { href: `${base}/property-management`, label: 'For property management', key: 'property-management' },
+  { href: `${base}/industries`, label: 'Industries', key: 'industries' },
   { href: `${base}/about`, label: 'About', key: 'about' },
   { href: `${base}/waitlist`, label: 'Waitlist', key: 'waitlist' },
 ];
