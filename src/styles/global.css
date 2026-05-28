@@ -362,14 +362,15 @@ a:hover { opacity: 0.7; }
 }
 
 .hero-dark h1 {
-  color: var(--paper-luminous);
+  color: #faf6ee;
   font-family: 'Fraunces', serif;
-  font-weight: 600;
-  font-size: clamp(28px, 4vw, 48px);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  max-width: 24ch;
-  margin: 0 auto 28px;
+  font-weight: 700;
+  font-size: clamp(34px, 5vw, 60px);
+  line-height: 1.1;
+  letter-spacing: -0.018em;
+  max-width: 22ch;
+  margin: 0 auto 32px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
 .hero-dark h1 em {
@@ -379,7 +380,7 @@ a:hover { opacity: 0.7; }
 }
 
 .hero-dark .lede {
-  color: rgba(244, 239, 228, 0.72);
+  color: rgba(250, 246, 238, 0.82);
   font-family: 'Inter', sans-serif;
   font-size: 17px;
   line-height: 1.6;
@@ -431,18 +432,19 @@ a:hover { opacity: 0.7; }
   -webkit-backdrop-filter: none;
 }
 .dark-hero-page .nav-brand {
-  color: var(--paper-luminous);
+  color: #faf6ee;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 .dark-hero-page .nav-brand .archway-mark {
   color: var(--glow-warm);
   filter: drop-shadow(0 0 6px rgba(232, 217, 168, 0.4));
 }
 .dark-hero-page .nav-links a {
-  color: rgba(244, 239, 228, 0.65);
+  color: rgba(250, 246, 238, 0.78);
 }
 .dark-hero-page .nav-links a:hover,
 .dark-hero-page .nav-links a.active {
-  color: var(--paper-luminous);
+  color: #faf6ee;
 }
 
 /* Re-lighten nav once user scrolls past the dark hero */
