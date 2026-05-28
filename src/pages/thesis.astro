@@ -177,8 +177,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <p class="seam-extend">
-          These six are the agentic target list pulled from the property-management map. The
-          same shape extends naturally to every other Stack B surface:
+          These six are the canonical seam pattern across SMB verticals. The same shape
+          extends naturally to every other Stack B surface:
         </p>
         <ul class="seam-extend-list">
           <li>Instagram tenant DMs landing as tour requests in the ops platform</li>
@@ -201,6 +201,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li>Industry-specific carve-outs (Fair Housing, HIPAA, GLBA, licensing) wired into the autonomy bands &mdash; see Section 04</li>
           <li>Contractor classification and insurance verification tracked across vendors</li>
         </ul>
+
+        <p class="seam-extend-note">
+          The seams are universal &mdash; the carve-outs are local. Fair Housing in property
+          management. HIPAA in healthcare. GLBA in finance. Food-safety and wage-and-hour
+          across hospitality. OSHA in trades. <a href={`${base}/industries`}>See your vertical →</a>
+        </p>
 
         <p class="seam-extend-close">Different surfaces. Different stakes. Same seams.</p>
       </div>
@@ -248,11 +254,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h5>○ Human only</h5>
             <p class="auto-sub">Legal exposure or irreversible</p>
             <ul>
-              <li>Applicant accept / reject (Fair Housing)</li>
+              <li>Customer/applicant decisions under protected-class logic (Fair Housing, ADA, fair hiring)</li>
+              <li>HIPAA / PHI disclosure and equivalents</li>
+              <li>Termination, eviction, or discipline decisions</li>
               <li>Granting system access</li>
-              <li>Termination / eviction decisions</li>
+              <li>Money-out actions above approval threshold</li>
               <li>Final hire decisions</li>
-              <li>Anything touching protected-class logic</li>
             </ul>
           </div>
         </div>
@@ -270,17 +277,93 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <p>
           Inside each box, the system-of-record vendors are already shipping agents.
-          AppFolio's Realm-X fills vacancies and dispatches maintenance. The all-in-one HR
-          platforms automate the people stack. <b>A frontal assault on either box loses.</b>
+          Realm-X handles the PM silo. ServiceTitan IQ handles the trades silo. Toast,
+          Mindbody, and every other vertical SoR are shipping their own in-silo AI.
+          The all-in-one HR platforms automate the people stack. <b>A frontal assault on
+          either box loses.</b>
         </p>
         <p>
           The defensible position is the <em>between</em> &mdash; the cross-stack seams
           where each vendor sees only its own silo and none is incentivized to build the
-          bridge. Plug <em>into</em> their marketplaces (AppFolio Stack, Buildium Marketplace)
-          as connective tissue. Don't replace the system of record.
+          bridge. Plug <em>into</em> their marketplaces (AppFolio Stack, ServiceTitan
+          Marketplace, Toast Marketplace &mdash; every SoR has a developer surface) as
+          connective tissue. Don't replace the system of record.
         </p>
         <p>
           That's Ennyn.
+        </p>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES BRIDGE — five concrete entrypoints -->
+    <section class="thesis-bridge">
+      <div class="wrap-narrow">
+        <div class="sec-head">
+          <span class="sec-num">06</span>
+          <div>
+            <h2>See it in your business.</h2>
+            <p class="lede">
+              Same orchestration shape, different tools and language. Pick a vertical
+              and read the concrete shape.
+            </p>
+          </div>
+        </div>
+
+        <ol class="bridge-list">
+          <li class="bridge-item accent-rust">
+            <a href={`${base}/property-management`}>
+              <span class="bridge-num">01</span>
+              <div class="bridge-body">
+                <h3>Property management</h3>
+                <p class="bridge-tools">AppFolio · Buildium · 50–500 doors</p>
+              </div>
+              <span class="bridge-arrow">→</span>
+            </a>
+          </li>
+          <li class="bridge-item accent-gold">
+            <a href={`${base}/fitness`}>
+              <span class="bridge-num">02</span>
+              <div class="bridge-body">
+                <h3>Fitness studios &amp; gyms</h3>
+                <p class="bridge-tools">Mindbody · Glofox · 200–500 members</p>
+              </div>
+              <span class="bridge-arrow">→</span>
+            </a>
+          </li>
+          <li class="bridge-item accent-slate">
+            <a href={`${base}/trades`}>
+              <span class="bridge-num">03</span>
+              <div class="bridge-body">
+                <h3>Home services &amp; trades</h3>
+                <p class="bridge-tools">ServiceTitan · Jobber · 5–25 techs</p>
+              </div>
+              <span class="bridge-arrow">→</span>
+            </a>
+          </li>
+          <li class="bridge-item accent-moss">
+            <a href={`${base}/medical`}>
+              <span class="bridge-num">04</span>
+              <div class="bridge-body">
+                <h3>Dental &amp; small medical</h3>
+                <p class="bridge-tools">Dentrix · ZocDoc · 2–10 chair</p>
+              </div>
+              <span class="bridge-arrow">→</span>
+            </a>
+          </li>
+          <li class="bridge-item accent-plum">
+            <a href={`${base}/restaurants`}>
+              <span class="bridge-num">05</span>
+              <div class="bridge-body">
+                <h3>Restaurant &amp; café groups</h3>
+                <p class="bridge-tools">Toast · Square · 2–6 locations</p>
+              </div>
+              <span class="bridge-arrow">→</span>
+            </a>
+          </li>
+        </ol>
+
+        <p class="bridge-foot">
+          Or <a href={`${base}/industries`}>see all five at a glance →</a>
         </p>
       </div>
     </section>
@@ -589,6 +672,118 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--rust);
     font-weight: 600;
     max-width: none;
+  }
+  .thesis .seam-extend-note {
+    padding: 14px 24px;
+    border-left: 3px solid var(--gold);
+    background: rgba(189, 138, 44, 0.05);
+    margin-top: -8px;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 15.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: none;
+  }
+  .thesis .seam-extend-note a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    font-style: normal;
+    font-weight: 600;
+    padding-bottom: 1px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .thesis .seam-extend-note a:hover {
+    color: var(--rust);
+    border-color: var(--rust);
+  }
+
+  /* === INDUSTRIES BRIDGE === */
+  .thesis .thesis-bridge {
+    background: var(--paper-2);
+    padding: 96px 0;
+  }
+  .thesis .bridge-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--line);
+  }
+  .thesis .bridge-item {
+    border-bottom: 1px solid var(--line);
+    border-left: 4px solid transparent;
+    transition: background 0.15s ease, border-left-color 0.15s ease;
+  }
+  .thesis .bridge-item.accent-rust  { border-left-color: var(--rust); }
+  .thesis .bridge-item.accent-gold  { border-left-color: var(--gold); }
+  .thesis .bridge-item.accent-slate { border-left-color: var(--slate); }
+  .thesis .bridge-item.accent-moss  { border-left-color: var(--moss); }
+  .thesis .bridge-item.accent-plum  { border-left-color: var(--plum); }
+  .thesis .bridge-item:hover { background: rgba(255, 255, 255, 0.55); }
+  .thesis .bridge-item a {
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    gap: 18px;
+    align-items: center;
+    padding: 22px 24px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .thesis .bridge-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--rust);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+  .thesis .bridge-body h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+    color: var(--ink);
+    line-height: 1.15;
+  }
+  .thesis .bridge-tools {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--soft);
+    letter-spacing: 0.04em;
+    margin: 0;
+    max-width: none;
+  }
+  .thesis .bridge-arrow {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    color: var(--ink);
+    font-weight: 600;
+    transition: transform 0.15s ease;
+  }
+  .thesis .bridge-item:hover .bridge-arrow {
+    transform: translateX(4px);
+  }
+  .thesis .bridge-foot {
+    margin: 32px auto 0;
+    text-align: center;
+    max-width: none;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--muted);
+  }
+  .thesis .bridge-foot a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    font-style: normal;
+    font-weight: 600;
+    padding-bottom: 1px;
+  }
+  .thesis .bridge-foot a:hover {
+    color: var(--rust);
+    border-color: var(--rust);
   }
 
   @media (max-width: 860px) {
