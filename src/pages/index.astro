@@ -47,12 +47,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="stacks-grid">
           <div class="stack">
             <p class="stack-label">The ops stack</p>
-            <p class="stack-tools">AppFolio · Buildium · Jobber · ServiceTitan · Mindbody · the industry tool that runs your unit of work</p>
+            <p class="stack-tools">AppFolio · ServiceTitan · Mindbody · Toast · the industry tool that runs your unit of work</p>
           </div>
           <div class="gap-mark">⚡</div>
           <div class="stack">
             <p class="stack-label">The people stack</p>
-            <p class="stack-tools">Gusto · QuickBooks · Workspace · LinkedIn · Instagram · Google Ads · Mailchimp · the tools that run you as an employer, a business, a brand, and a pipeline</p>
+            <p class="stack-tools">Gusto · QuickBooks · Workspace · Instagram · Google Ads · the tools that run you as an employer, a business, a brand, and a pipeline</p>
           </div>
         </div>
         <p class="gap-caption">No vendor owns the seam between them.</p>
@@ -103,6 +103,49 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <p>Days, not quarters. No software to learn, no integration project to scope, no in-house ops team to hire. The team and the agents are one delivery system.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES HANDOFF — five vertical entrypoints -->
+    <section class="industries-link">
+      <div class="wrap">
+        <div class="industries-link-head">
+          <p class="kicker">Industries</p>
+          <h2>Five surfaces. One thesis.</h2>
+          <p class="lede">Same orchestration shape, different tools and language. Pick yours.</p>
+        </div>
+
+        <div class="industries-link-grid">
+          <a href={`${base}/property-management`} class="ind-card accent-rust">
+            <h3>Property management</h3>
+            <p class="ind-tools">AppFolio · Buildium</p>
+            <span class="ind-arrow">→</span>
+          </a>
+          <a href={`${base}/fitness`} class="ind-card accent-gold">
+            <h3>Fitness studios &amp; gyms</h3>
+            <p class="ind-tools">Mindbody · Glofox</p>
+            <span class="ind-arrow">→</span>
+          </a>
+          <a href={`${base}/trades`} class="ind-card accent-slate">
+            <h3>Home services &amp; trades</h3>
+            <p class="ind-tools">ServiceTitan · Jobber</p>
+            <span class="ind-arrow">→</span>
+          </a>
+          <a href={`${base}/medical`} class="ind-card accent-moss">
+            <h3>Dental &amp; small medical</h3>
+            <p class="ind-tools">Dentrix · ZocDoc</p>
+            <span class="ind-arrow">→</span>
+          </a>
+          <a href={`${base}/restaurants`} class="ind-card accent-plum">
+            <h3>Restaurant &amp; café groups</h3>
+            <p class="ind-tools">Toast · Square</p>
+            <span class="ind-arrow">→</span>
+          </a>
+        </div>
+
+        <p class="industries-link-foot">
+          <a href={`${base}/industries`}>See all five →</a>
+        </p>
       </div>
     </section>
 
@@ -297,11 +340,112 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: var(--soft);
   }
 
+  /* === INDUSTRIES HANDOFF === */
+  .home .industries-link {
+    background: var(--paper-2);
+    padding: 112px 0;
+  }
+  .home .industries-link-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 56px;
+  }
+  .home .industries-link-head .kicker {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+  .home .industries-link-head h2 {
+    margin-bottom: 14px;
+  }
+  .home .industries-link-head .lede {
+    margin: 0 auto;
+    font-size: 17px;
+    color: var(--muted);
+  }
+  .home .industries-link-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  .home .ind-card {
+    display: block;
+    padding: 24px 20px 28px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top-width: 3px;
+    text-decoration: none;
+    color: var(--ink);
+    position: relative;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+  .home .ind-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 32, 18, 0.08);
+  }
+  .home .ind-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .home .ind-card .ind-tools {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--soft);
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+    margin: 0 0 18px;
+    max-width: none;
+  }
+  .home .ind-card .ind-arrow {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .home .ind-card.accent-rust  { border-top-color: var(--rust); }
+  .home .ind-card.accent-gold  { border-top-color: var(--gold); }
+  .home .ind-card.accent-slate { border-top-color: var(--slate); }
+  .home .ind-card.accent-moss  { border-top-color: var(--moss); }
+  .home .ind-card.accent-plum  { border-top-color: var(--plum); }
+  .home .ind-card.accent-rust:hover  { border-color: var(--rust); }
+  .home .ind-card.accent-gold:hover  { border-color: var(--gold); }
+  .home .ind-card.accent-slate:hover { border-color: var(--slate); }
+  .home .ind-card.accent-moss:hover  { border-color: var(--moss); }
+  .home .ind-card.accent-plum:hover  { border-color: var(--plum); }
+  .home .industries-link-foot {
+    text-align: center;
+    margin: 36px auto 0;
+    max-width: none;
+    font-family: 'Inter', sans-serif;
+  }
+  .home .industries-link-foot a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+  }
+  .home .industries-link-foot a:hover {
+    color: var(--rust);
+    border-color: var(--rust);
+  }
+
+  @media (max-width: 1024px) {
+    .home .industries-link-grid { grid-template-columns: repeat(3, 1fr); }
+  }
   @media (max-width: 768px) {
     .home > main > section:not(.hero-dark) { padding: 64px 0; }
     .home .stacks-grid { grid-template-columns: 1fr; }
     .home .gap-mark { padding: 8px 0; }
     .home .props-grid { grid-template-columns: 1fr; }
     .home .waitlist-form { flex-direction: column; }
+    .home .industries-link { padding: 80px 0; }
+    .home .industries-link-grid { grid-template-columns: repeat(2, 1fr); }
+    .home .industries-link-head { margin-bottom: 36px; }
   }
 </style>

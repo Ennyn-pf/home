@@ -68,8 +68,18 @@ const bodyClass = [
 
   <footer class="footer">
     <div class="footer-inner">
-      <div>Ennyn · ennyn.io · stealth</div>
-      <div>© 2026 Ennyn</div>
+      <div class="footer-brand">Ennyn · ennyn.io · stealth</div>
+      <nav class="footer-industries" aria-label="For your industry">
+        <span class="footer-industries-label">For your industry</span>
+        <span class="footer-industries-links">
+          <a href={`${base}/property-management`}>Property management</a>
+          <a href={`${base}/fitness`}>Fitness</a>
+          <a href={`${base}/trades`}>Trades</a>
+          <a href={`${base}/medical`}>Medical</a>
+          <a href={`${base}/restaurants`}>Restaurants</a>
+        </span>
+      </nav>
+      <div class="footer-copy">© 2026 Ennyn</div>
     </div>
   </footer>
 
