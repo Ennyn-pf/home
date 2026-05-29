@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout
+  title="Not found — Ennyn"
+  description="That page doesn't exist."
+  register="b"
+  activeNav={null}
+>
+  <main class="notfound">
+
+    <!-- Redirect old /home/... URLs to the same path at root.
+         Runs synchronously before any visible content renders. -->
+    <script is:inline>
+      (function () {
+        var p = window.location.pathname;
+        if (p === '/home' || p === '/home/') {
+          window.location.replace('/' + window.location.search + window.location.hash);
+          return;
+        }
+        if (p.indexOf('/home/') === 0) {
+          var newPath = p.substring(5); // "/home/thesis" -> "/thesis"
+          window.location.replace(newPath + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
+
+    <section class="hero">
+      <div class="wrap-narrow">
+        <p class="kicker">404</p>
+        <h1>That page isn't here.</h1>
+        <p class="lede">
+          The URL you tried doesn't exist on this site. If you arrived
+          from an old <code>/home/...</code> link, we recently moved the
+          site to the root path &mdash; we'll redirect you there
+          automatically. Otherwise, the page may have been moved or
+          renamed.
+        </p>
+        <p class="cta-row">
+          <a href={`${base}/`} class="btn-link">→ Back home</a>
+          <a href={`${base}/industries`} class="btn-link secondary">See industries</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>
+
+<style>
+  .notfound .hero {
+    padding: 140px 0 96px;
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+  .notfound .kicker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    font-weight: 600;
+    margin-bottom: 22px;
+    max-width: none;
+  }
+  .notfound h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(36px, 5vw, 56px);
+    letter-spacing: -0.02em;
+    margin: 0 auto 22px;
+    max-width: 18ch;
+  }
+  .notfound .lede {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0 auto 36px;
+    max-width: 52ch;
+  }
+  .notfound code {
+    font-family: 'IBM Plex Mono', monospace;
+    background: rgba(180, 71, 31, 0.08);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: var(--rust);
+  }
+  .notfound .cta-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: none;
+  }
+  .notfound .btn-link {
+    display: inline-block;
+    padding: 13px 24px;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: opacity 0.15s ease;
+  }
+  .notfound .btn-link:hover { opacity: 0.88; }
+  .notfound .btn-link.secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+  .notfound .btn-link.secondary:hover {
+    background: var(--ink);
+    color: var(--paper);
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .notfound .hero { padding: 96px 0 64px; }
+  }
+</style>
